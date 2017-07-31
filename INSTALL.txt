@@ -1,0 +1,22 @@
+REQUIREMENTS AND NOTES
+----------------------
+
+- A web server. Apache (version 2.0 or greater) is recommended.
+- PHP 5.2.4 (or greater) (http://www.php.net/).
+- One of the following databases:
+  - MySQL 5.0.15 (or greater) (http://www.mysql.com/).
+
+INSTALLATION
+-----------------
+1. Download kunaon-stable.zip or kunaon-stable.tar.gz from 
+2. Extract files and move the contents of that directory into a directory within your web server's document root or your public HTML directory 
+3. KuNaon POS  stores all site information in a database, you must create this database in order to install KuNaon POS, and grant KuNaon POS certain database privileges (such as the ability to create tables). For details, consult
+INSTALL.mysql.txt. You may also need to consult your web hosting provider for instructions specific to your web host Take note of the username, password, database name, and hostname as you
+create the database. You will enter this information during the install.
+4. To run the install script, point your browser to the base URL of your
+website (e.g., http://www.hello.com). You will be guided through several screens to set up the database
+During installation, several files and directories need to be created, which
+the install script will try to do automatically. However, on some hosting
+environments, manual steps are required, and the install script will tell
+you that it cannot proceed until you fix certain issues. This is normal and
+does not indicate a problem with your server.
