@@ -194,7 +194,7 @@ class Order extends CI_Controller {
 
 	public function bill($number){
 		$html = $this->load->view('public/frontoffice/order/bill',$this->order->GetOrder($number),true);
-		$this->pdf->Print('Bill Transaction','Struck Order',$html);
+		$this->pdf->DoPrint('Bill Transaction','Struck Order',$html);
 	}
 
 }

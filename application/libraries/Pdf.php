@@ -30,7 +30,7 @@ class Pdf{
 		require_once APPPATH.'third_party/tcpdf/tcpdf.php';
 	}
 
-	public function Print($title,$subject,$html){
+	public function DoPrint($title,$subject,$html){
 
 		$pdf = new TCPDF('P', 'mm', 'THERMAL', 'UTF-8', false);
 

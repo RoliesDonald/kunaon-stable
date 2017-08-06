@@ -11,7 +11,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <title>Page Not Found</title>
         <meta name="keywords" content="404 iphone web template, Andriod web template, Smartphone web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
         <link rel=icon href="<?php echo base_url();?>assets/dist/img/logo.png" sizes="16x16" type="image/png">
-        <link href="<?php echo base_url()?>assets/dist/css/error.css" rel="stylesheet" type="text/css"  media="all" />
+        <link href="<?php echo base_url()?>assets/dist/css/Error.css" rel="stylesheet" type="text/css"  media="all" />
     </head>
     <body>
         <!--start-wrap--->
