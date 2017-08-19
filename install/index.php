@@ -68,12 +68,36 @@
 				</div>
 			</div>
 			<div class="col-md-8 mycontent">
-				<form class="form-horizontal " role="form" data-toggle="validator" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="POST">
+				 	<?php if(isset($_GET['error'])): ?>
+					   	<?php if(!empty($_GET['error'])): ?>
+					   		<div class="alert alert-danger">
+						   		<div class="row">
+							   		<div class="col-md-12">
+							   			<p><b>Installation Failed </b> : <?php echo $_GET['error']; ?></p>
+							   		</div>
+						   		</div>
+					   		</div>
+					   	<?php endif; ?>	
+					<?php endif; ?>	
+					<form class="form-horizontal " role="form" data-toggle="validator" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="POST">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-						  <h3 class="panel-title"><i class="fa fa-server"></i> MySQL Database Configuration</h3>
+						  <h3 class="panel-title"><i class="fa fa-server"></i>	Server Configuration</h3>
 					   </div>
+					  
 					   <div class="panel-body">
+					  	 <div class="form-group">
+					  	 	 <?php
+					  	 	  $root = "http://".$_SERVER['HTTP_HOST'];
+							  $root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
+							  $dir = str_replace('install/', '', $root)
+
+					  	 	 ?>
+							 <label for="dir" class="col-sm-3 control-label">Site Directory</label>
+							 <div class="col-sm-9">
+								 <input type="text" class="form-control" name="dir" placeholder="Root Directory" value="<?php echo $dir;?>"  required>
+							  </div>
+					     </div>
 						 <div class="form-group">
 							  <label for="dbName" class="col-sm-3 control-label">Database Name</label>
 							 <div class="col-sm-9">
@@ -109,21 +133,7 @@
 				</form>
 			</div>	
 			<?php Else: ?>
-			<?php
-
-			$root = "http://".$_SERVER['HTTP_HOST'];
-			$root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
-			$arr_url = explode('/', $root);
-			$link = array();
-			foreach($arr_url as $row){
-				if($row==trim(strtolower('install'))){
-					break;
-				}
-				$link[] = $row;
-			}
-			$base_url = implode('/', $link);
-
-			?>
+			<?php require_once('../config.php'); ?>
 			<div class="col-md-12 mycontent">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
@@ -145,7 +155,7 @@
 								</span>
 								<div class="text-center">
 									<br>
-									<a href="<?php echo $base_url;?>" class="btn btn-primary"><i class="fa fa-home"></i> Go To Home Page</a>
+									<a href="<?php echo ROOT_DIR;?>" target='_blank' class="btn btn-primary"><i class="fa fa-home"></i> Go To Home Page</a>
 								</div>
 							</div>
 						</di>
