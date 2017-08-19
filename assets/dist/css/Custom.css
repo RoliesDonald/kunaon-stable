@@ -236,6 +236,18 @@ input[type=number]::-webkit-outer-spin-button {
    object-fit: contain; 
 }
 
+.main-footer {
+  background: #FC575E;
+  padding: 15px;
+  color: #fff;
+  border-top: 1px solid #d2d6de;
+}
+
+.main-footer a{
+  color:  #eee;
+}
+
+
 /*
 stylize any heading tags withing white-panel below
 */

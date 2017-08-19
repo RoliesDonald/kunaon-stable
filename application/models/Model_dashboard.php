@@ -132,7 +132,7 @@ class Model_dashboard extends CI_Model{
 
 	public function FrontOffice(){
 
-		$this->db->where('transaction_date >= CURDATE()');
+		$this->db->where('created >= CURDATE()');
 		$this->db->where('transaction_type','-1');
 		$today_order = $this->db->get('tr_sales')->num_rows();
 

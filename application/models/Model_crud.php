@@ -113,8 +113,10 @@ class Model_crud extends CI_Model{
 		$this->db->select($table.'.id as id_main, '.$table.'.*');
 		if($ref){
 			foreach($ref as $r){
-				$this->db->select($r["REFERENCED_TABLE_NAME"].'.*');
-				$this->db->join($r["REFERENCED_TABLE_NAME"],$r["REFERENCED_TABLE_NAME"].'.id = '.$r["TABLE_NAME"].'.'.$r["COLUMN_NAME"]);
+				if($this->db->table_exists($r["REFERENCED_TABLE_NAME"])){
+					$this->db->select($r["REFERENCED_TABLE_NAME"].'.*');
+					$this->db->join($r["REFERENCED_TABLE_NAME"],$r["REFERENCED_TABLE_NAME"].'.id = '.$r["TABLE_NAME"].'.'.$r["COLUMN_NAME"]);
+				}
 			}
 		}
 		$this->db->limit(1);
@@ -163,7 +165,7 @@ class Model_crud extends CI_Model{
 	}
 
 	public function TransactionNumber($id,$table){
-		$this->db->where('transaction_date >= CURDATE()');
+		$this->db->where('created >= CURDATE()');
 		$this->db->select_max($id);
 		$current = $this->db->get($table)->row();
 		if($current->$id){
