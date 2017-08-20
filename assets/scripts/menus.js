@@ -14,7 +14,7 @@ $(document).ready(function(){
 	 	App.setDataTables('#TableBack','api/datatables/menu');
 	}
 
-    App.GetSelect2('#category_id','api/selecttwo/menu_category','Search By Category..');
+    App.GetSelect2('#category_id','api/SelectTwo/menu_category','Search By Category..');
    
     if(document.getElementById("price_view")!=null){
 

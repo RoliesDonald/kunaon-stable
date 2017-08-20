@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	 App.GetSelect2('#target_by','api/selecttwo/user','Select User');
+	 App.GetSelect2('#target_by','api/SelectTwo/user','Select User');
 
 	 if(document.getElementById('TableMessages')!=null){
 	 	App.setDataTables('#TableMessages','api/datatables/messages',false);

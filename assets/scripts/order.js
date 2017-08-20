@@ -368,9 +368,9 @@ $(document).ready(function(){
         $('.price').maskMoney({prefix:'', thousands:'.', decimal:',', precision:0});
         $("[data-mask]").inputmask();
         $(".credit_number").inputmask('(999) 999-9999');
-        App.GetSelect2('#bank_id','api/selecttwo/bank','Search Bank..');
-        App.GetSelect2('#bank_id2','api/selecttwo/bank','Search Bank..');
-        App.GetSelect2('#creditcard_id','api/selecttwo/creditcard','Search Credit Card..');
+        App.GetSelect2('#bank_id','api/SelectTwo/bank','Search Bank..');
+        App.GetSelect2('#bank_id2','api/SelectTwo/bank','Search Bank..');
+        App.GetSelect2('#creditcard_id','api/SelectTwo/creditcard','Search Credit Card..');
     }
 
 
