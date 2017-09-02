@@ -27,6 +27,7 @@ class Menus extends CI_Controller {
 
 	public function __Construct(){
 		parent::__Construct();
+		$this->app->auth(true);
 		$this->load->model('Model_menu','menu');
 		$this->load->model('Model_order','order');
 	}

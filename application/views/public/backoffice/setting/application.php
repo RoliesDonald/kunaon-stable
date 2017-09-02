@@ -26,13 +26,13 @@
         <div class="col-sm-10">
              <div class="row">
                 <div class="col-md-6">
-                    <input type="number" class="form-control" min="0" value="0" />
+                    <input type="number" name="app_bill_width"  class="form-control" min="0" value="<?php echo setting('app_bill_width');?>" required/>
                 </div>
                 <div class="col-md-6">
-                    <select class="form-control select2">
-                        <option value="0">Inches</option>
-                        <option value="1">Centimetes</option>
-                        <option value="2">Milimeters</option>
+                    <select class="form-control select2"  name="app_bill_size" required>
+                        <option value="0" <?php echo setting('app_bill_size') == '0' ? 'selected' : '' ;?>>Inches</option>
+                        <option value="1" <?php echo setting('app_bill_size') == '1' ? 'selected' : '' ;?>>Centimetes</option>
+                        <option value="2" <?php echo setting('app_bill_size') == '2' ? 'selected' : '' ;?>>Milimeters</option>
                     </select>
                 </div>
              </div>

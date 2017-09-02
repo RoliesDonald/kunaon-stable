@@ -27,6 +27,7 @@ class User extends CI_Controller {
 
     public function __Construct(){
         parent::__Construct();
+        $this->app->auth(true);
         $this->load->model('Model_account','account');
     }
 

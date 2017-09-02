@@ -32,7 +32,7 @@ if (!function_exists('user_image')) {
         if($id){
            $profile = $CI->account->Profile($id);
         }
-        if($profile->photo){
+        if($profile->photo && file_exists($profile->photo)){
         	return base_url().''.$profile->photo;
         }else{
         	return base_url().'assets/dist/img/user-blank.png';
@@ -326,6 +326,27 @@ if (!function_exists('get_messages')) {
         $id_user = $CI->session->userdata('ID_USER');
         $data = $CI->message->UnReadByUser($id_user);
         return $data;
+    }
+
+}
+
+if (!function_exists('get_width_size')) {
+
+    function get_width_size() {
+
+        $width = setting('app_bill_width');
+        $size = setting('app_bill_size');
+        $convert = 0;
+
+        if($size=='0'){
+            $convert = (float)96.000000000001*$width;
+        }else if($size=='1'){
+            $convert = (float)37.795276*$width;
+        }else{
+            $convert = (float)3.7795275590551*$width;
+        }
+
+        return $convert;
     }
 
 }

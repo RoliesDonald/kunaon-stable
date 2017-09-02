@@ -58,8 +58,6 @@
 <!-- Mask Money -->
 <script src="<?php echo base_url(); ?>assets/plugins/MaskMoney/jquery.maskMoney.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/MaskMoney/numeral.min.js"></script>
-<!-- Ckeditor -->
-<script src="<?php echo base_url();?>assets/plugins/ckeditor/ckeditor.js"></script>
 <!-- page script -->
 <script src="<?php echo base_url(); ?>assets/scripts/_global.js"></script>
 <script src="<?php echo base_url(); ?>assets/scripts/backoffice.js"></script>

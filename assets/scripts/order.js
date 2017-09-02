@@ -425,6 +425,14 @@ $(document).ready(function(){
 
     }
 
+    $('#btn-bill').click(function(){
+        var url =  $(this).attr('href');
+        if(document.getElementById("bill_size")!=null){
+            var size = $('#bill_size').val();
+            window.open(url, 'thePopup', 'width='+size);
+        }
+        return false;
+    });
    
    
 });

@@ -27,6 +27,7 @@ class SelectTwo extends CI_Controller{
 
 	public function __Construct(){
 		parent::__Construct();
+		$this->app->auth(true);
 	}
 
 	public function timezone(){

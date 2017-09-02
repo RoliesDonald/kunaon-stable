@@ -27,6 +27,7 @@ class Bank extends CI_Controller {
 
 	public function __Construct(){
 		parent::__Construct();
+    $this->app->auth(true);
     $this->table = 'en_banks';
 	}
 

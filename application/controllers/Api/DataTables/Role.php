@@ -26,8 +26,9 @@ class Role extends CI_Controller {
   // See LICENSE.TXT file for more information.
 
 	public function __Construct(){
-		parent::__Construct();
-        $this->table = 'app_roles';
+		  parent::__Construct();
+      $this->app->auth(true);
+      $this->table = 'app_roles';
 	}
 
 	public function index(){

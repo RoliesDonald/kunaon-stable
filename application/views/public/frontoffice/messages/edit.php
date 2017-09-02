@@ -22,7 +22,7 @@
       <div class="form-group">
         <label for="inputEmail3" class="col-sm-2 control-label">Content</label>
         <div class="col-sm-10">
-            <textarea name="content" class="ckeditor" id="content" required="true" ><?php echo $data->content;?></textarea>
+            <textarea name="content" class="form-control" rows="6" id="content" required="true" ><?php echo $data->content;?></textarea>
         </div>
       </div>
     </div><!-- /.box-body -->

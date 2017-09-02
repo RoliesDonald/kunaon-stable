@@ -36,7 +36,6 @@ Javascript
   Numeral                 Adam Draper http://adamwdraper.github.com/Numeral-js/
   iCheck 1.0.1            Damir Sultanov, http://fronteed.com
   image cropping          fengyuanchen https://github.com/fengyuanchen/cropper
-  Ckeditor                Frederico Knabben http://ckeditor.com
   date-range-picker       Stefan Petre https://github.com/eternicode/bootstrap-datepicker/
   bootstrap color picker  Bootstrap Colorpicker http://mjolnic.github.io/bootstrap-colorpicker/
   bootstrap clock picker  Wang Shenwei http://weareoutman.github.io/clockpicker

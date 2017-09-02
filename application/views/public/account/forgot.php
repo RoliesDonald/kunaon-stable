@@ -34,7 +34,7 @@
     <body>
        <div class="container">
             <div class="card card-container">
-                <img id="" class="img-responsive center-block" src="<?php echo base_url();?>assets/dist/img/logo.png" />
+                <img id="img-front" class="img-responsive center-block" src="<?php echo base_url();?>assets/dist/img/logo.png" />
                 <p id="profile-name" class="profile-name-card">
                     KuNaon POS
                 </p>

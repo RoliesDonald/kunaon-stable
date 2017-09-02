@@ -60,9 +60,18 @@ class App {
     }
 
 
-    public function auth(){
-        if($this->CI->session->userdata('IS_LOGIN')==true){
-            if($this->_class!='api'){
+    public function auth($is_api = false){
+       if($is_api){
+           if($this->CI->session->userdata('IS_LOGIN')!=true){
+               redirect('account/login');
+           }
+       }else{
+           if($_POST){
+                foreach ($_POST as $key => $value) {
+                  $_POST[$key] = is_array($key) ? $_POST[$key]: $this->CI->myinput->Clean($_POST[$key]);
+                }
+            }
+            if($this->CI->session->userdata('IS_LOGIN')==true){
                 $CONTROLLER = $this->CI->session->userdata('CONTROLLER');
                 $i = 0;
                 foreach($CONTROLLER as $c){
@@ -73,13 +82,13 @@ class App {
                 if($i==0){
                     redirect('error');
                 }
+            }else{
+               redirect('account/login');
             }
-        }else{
-            $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-            $this->CI->session->set_flashdata('callback', $actual_link); 
-            redirect('account/login');
-        }
+       }
     }
+
+   
 
     public function render($title = "Super Cafe",$render, $data = null,$backkoffice = true) {
         $this->setTitle($title);

@@ -42,7 +42,7 @@
                                                 <input type="hidden" class="avatar-src" name="avatar_src">
                                                 <input type="hidden" class="avatar-data" name="avatar_data">
                                                 <span class="btn btn-default btn-file">
-                                                    <i class="fa fa-upload"></i>  Choose Image <input type="file" class="avatar-input" id="avatarInput" class="fileinput" name="avatar_file">
+                                                    <i class="fa fa-upload"></i>  Choose Image <input type="file" class="avatar-input" id="avatarInput" class="fileinput" name="avatar_file" accept="image/x-png,image/gif,image/jpeg">
                                                 </span>
                                             </div>
 

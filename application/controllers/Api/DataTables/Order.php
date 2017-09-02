@@ -27,6 +27,7 @@ class Order extends CI_Controller {
 
   public function __Construct(){
     parent::__Construct();
+    $this->app->auth(true);
     $this->table = 'tr_sales';
     $this->load->model('Model_order','order');
   }

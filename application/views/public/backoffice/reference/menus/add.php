@@ -103,7 +103,7 @@
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Description</label>
                                 <div class="col-sm-10">
-                                    <textarea name="description" class="ckeditor" id="description" required="true" ></textarea>
+                                    <textarea name="description" class="form-control" rows="6"  id="description" required="true" ></textarea>
                                 </div>
                             </div>
                         </form>

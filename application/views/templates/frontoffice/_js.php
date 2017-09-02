@@ -48,8 +48,6 @@
 <script src="<?php echo base_url(); ?>assets/plugins/cropping/main.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url(); ?>assets/dist/js/app.min.js"></script>
-<!-- Ckeditor -->
-<script src="<?php echo base_url();?>assets/plugins/ckeditor/ckeditor.js"></script>
 <!-- date-range-picker -->
 <script src="<?php echo base_url(); ?>assets/dist/js/moment.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/daterangepicker/daterangepicker.js"></script>

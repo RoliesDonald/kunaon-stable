@@ -26,8 +26,9 @@ class Supplier extends CI_Controller {
   // See LICENSE.TXT file for more information.
 
 	public function __Construct(){
-		parent::__Construct();
-        $this->table = 'en_suppliers';
+		  parent::__Construct();
+      $this->app->auth(true);
+      $this->table = 'en_suppliers';
 	}
 
 	public function index(){

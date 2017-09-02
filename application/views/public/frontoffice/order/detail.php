@@ -5,6 +5,7 @@
                 <div class="box-title">
                     Detail Order
                 </div>
+                <input type="hidden" id="bill_size" value="<?php echo get_width_size();?>"/>
                 <div class="box-tools">
                   <a class="btn btn-default btn-sm" href="<?php echo base_url('order');?>"><i class="fa fa-reply"></i> Back</a>
                   <a class="btn btn-default btn-sm" href="<?php echo base_url('order/add');?>"><i class="fa fa-plus"></i> Add New</a>
@@ -13,7 +14,7 @@
                     <a class="btn btn-default btn-sm delete" href="<?php echo base_url('order/delete/'.$payment->sales_id);?>"><i class="fa fa-trash"></i> Delete</a>
                   <?php EndIf; ?>  
                   <a class="btn btn-default btn-sm" href="#" id="DoPaid"><i class="fa fa-money"></i> Payment</a>
-                  <a class="btn btn-default btn-sm" target="_blank" href="<?php echo base_url('order/bill/'.$payment->sales_id);?>"><i class="fa fa-print"></i> Print Bill</a>    
+                  <a class="btn btn-default btn-sm" id="btn-bill" href="<?php echo base_url('order/bill/'.$payment->sales_id);?>"><i class="fa fa-print"></i> Print Bill</a>    
                 </div>
             </div><!-- /.box-header -->
             <div class="box-body ">

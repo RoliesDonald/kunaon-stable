@@ -4,7 +4,7 @@
         <div class="box">
             <div class="box-header with-border">
                 <div class="box-title">
-            <a href="<?php echo base_url();?>/messages/add" class="btn btn-primary btn-sm" data-toggle="tooltip" 
+            <a href="<?php echo base_url();?>messages/add" class="btn btn-primary btn-sm" data-toggle="tooltip" 
                 data-placement="top" title="Create Data">
                 <i class="fa fa-plus"></i> Compose
             </a>
@@ -14,7 +14,7 @@
             </a>
         </div>
         <div class="box-tools">
-             <a href="<?php echo base_url();?>/messages" class="btn btn-warning btn-sm pull-right" data-toggle="tooltip" 
+             <a href="<?php echo base_url();?>messages" class="btn btn-warning btn-sm pull-right" data-toggle="tooltip" 
                 data-placement="top" title="Refresh">
                 <i class="fa fa-refresh"></i> Refresh
             </a>
