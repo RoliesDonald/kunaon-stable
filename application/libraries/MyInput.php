@@ -23,7 +23,7 @@
 //
 // See LICENSE.TXT file for more information.
 
-class MyInput{
+class Myinput{
 
 	public function __Construct(){
 		$this->CI  = get_instance();
