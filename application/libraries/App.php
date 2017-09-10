@@ -68,7 +68,9 @@ class App {
        }else{
            if($_POST){
                 foreach ($_POST as $key => $value) {
-                  $_POST[$key] = is_array($key) ? $_POST[$key]: $this->CI->myinput->Clean($_POST[$key]);
+                  if(!is_array($_POST[$key])){
+                    $_POST[$key] = is_array($key) ? $_POST[$key]: $this->CI->myinput->Clean($_POST[$key]);
+                  }
                 }
             }
             if($this->CI->session->userdata('IS_LOGIN')==true){
