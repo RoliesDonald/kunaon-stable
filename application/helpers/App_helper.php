@@ -75,7 +75,10 @@ if (!function_exists('setting')) {
         $CI->db->where('name',trim($name));
         $CI->db->limit(1);
         $data = $CI->db->get('app_setting')->row();
-        return $data->value;
+		if($data->value!=null){
+			return $data->value;
+		}
+        return null;
     }
 }
 
