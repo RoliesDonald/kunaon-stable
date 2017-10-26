@@ -205,7 +205,7 @@ CREATE TABLE `app_setting` (
   `name` varchar(255) DEFAULT NULL,
   `value` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -214,7 +214,7 @@ CREATE TABLE `app_setting` (
 
 LOCK TABLES `app_setting` WRITE;
 /*!40000 ALTER TABLE `app_setting` DISABLE KEYS */;
-INSERT INTO `app_setting` VALUES (1,'app_name','Application'),(2,'app_version','1.0'),(3,'app_licenced',NULL),(4,'app_published','2017-08-19 15:50:59'),(5,'app_language','187'),(6,'app_timezone','Asia/Jakarta'),(7,'app_currency','IDR'),(8,'app_menu_categories',''),(9,'app_themes','Default'),(10,'app_dateformat','d/m/Y'),(11,'app_printer',NULL),(12,'com_name','KuNaon Cafe'),(13,'com_address','Indonesia'),(14,'com_phone','(095) 969-5959'),(15,'com_email','kunaon.studio@gmail.com'),(16,'com_website','www.kunaon.co.id'),(17,'com_hours_first','10:00'),(18,'com_logo',NULL),(19,'op_gender','[{\"id\":\"1\",\"name\":\"Male\"}, {\"id\":\"0\",\"name\":\"Female\"}]  '),(20,'op_status','[{\"id\":\"0\",\"name\":\"Single\"}, {\"id\":\"1\",\"name\":\"Married\"},{\"id\":\"2\",\"name\":\"Widower\"}]  '),(21,'op_religious','[{\"id\":\"0\",\"name\":\"Moslem\"}, {\"id\":\"1\",\"name\":\"Christ\"},{\"id\":\"2\",\"name\":\"Catholic\"},{\"id\":\"3\",\"name\":\"Hinduism\"},{\"id\":\"4\",\"name\":\"Buddhist\"}]'),(22,'op_blood_type','[{\"id\":\"0\",\"name\":\"A\"}, {\"id\":\"1\",\"name\":\"B\"},{\"id\":\"2\",\"name\":\"AB\"},{\"id\":\"3\",\"name\":\"O\"}]'),(23,'op_transaction','[{\"id\":\"0\",\"name\":\"Cash\"}, {\"id\":\"1\",\"name\":\"Credit\"},{\"id\":\"2\",\"name\":\"Cheque\"}]'),(24,'app_expired',NULL),(25,'app_paging','10'),(26,'com_fax',NULL),(27,'app_userpass','myuser'),(28,'com_hours_last','21:00'),(29,'com_tax','5'),(30,'com_discount','25'),(31,'app_date_installed','2017-08-19 15:50:59'),(32,'app_token','MGFkOWQ1NjMtMjJiYS00YTViLWI4M2YtZjJmZTNjYTkwMWFkMjAxNy0wOC0xOSAxNTo1MDo1OQ=='),(33,'app_vpn','http://localhost/kunaon-stable/'),(34,'app_barcode','TYPE_UPC_A'),(35,'app_installed','true');
+INSERT INTO `app_setting` VALUES (1,'app_name','Application'),(2,'app_version','1.0'),(3,'app_licenced',NULL),(4,'app_published','2017-08-19 15:50:59'),(5,'app_language','187'),(6,'app_timezone','Asia/Jakarta'),(7,'app_currency','IDR'),(8,'app_menu_categories',''),(9,'app_themes','Default'),(10,'app_dateformat','d/m/Y'),(11,'app_printer',NULL),(12,'com_name','KuNaon Cafe'),(13,'com_address','Indonesia'),(14,'com_phone','(095) 969-5959'),(15,'com_email','kunaon.studio@gmail.com'),(16,'com_website','www.kunaon.co.id'),(17,'com_hours_first','10:00'),(18,'com_logo',NULL),(19,'op_gender','[{\"id\":\"1\",\"name\":\"Male\"}, {\"id\":\"0\",\"name\":\"Female\"}]  '),(20,'op_status','[{\"id\":\"0\",\"name\":\"Single\"}, {\"id\":\"1\",\"name\":\"Married\"},{\"id\":\"2\",\"name\":\"Widower\"}]  '),(21,'op_religious','[{\"id\":\"0\",\"name\":\"Moslem\"}, {\"id\":\"1\",\"name\":\"Christ\"},{\"id\":\"2\",\"name\":\"Catholic\"},{\"id\":\"3\",\"name\":\"Hinduism\"},{\"id\":\"4\",\"name\":\"Buddhist\"}]'),(22,'op_blood_type','[{\"id\":\"0\",\"name\":\"A\"}, {\"id\":\"1\",\"name\":\"B\"},{\"id\":\"2\",\"name\":\"AB\"},{\"id\":\"3\",\"name\":\"O\"}]'),(23,'op_transaction','[{\"id\":\"0\",\"name\":\"Cash\"}, {\"id\":\"1\",\"name\":\"Credit\"},{\"id\":\"2\",\"name\":\"Cheque\"}]'),(24,'app_expired',NULL),(25,'app_paging','10'),(26,'com_fax',NULL),(27,'app_userpass','myuser'),(28,'com_hours_last','21:00'),(29,'com_tax','5'),(30,'com_discount','25'),(31,'app_date_installed','2017-08-19 15:50:59'),(32,'app_token','MGFkOWQ1NjMtMjJiYS00YTViLWI4M2YtZjJmZTNjYTkwMWFkMjAxNy0wOC0xOSAxNTo1MDo1OQ=='),(33,'app_vpn','http://localhost/kunaon-stable/'),(34,'app_barcode','TYPE_UPC_A'),(35,'app_installed','true'),(36,'app_bill_width','75'),(37,'app_bill_size','2');
 /*!40000 ALTER TABLE `app_setting` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -323,7 +323,7 @@ CREATE TABLE `app_users` (
   `is_member` enum('0','1') DEFAULT '0',
   `is_root` enum('0','1') DEFAULT '0',
   `actived` enum('0','1') DEFAULT NULL,
-  `expired` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `expired` datetime DEFAULT NULL,
   `login_at` datetime DEFAULT NULL,
   `logout_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -795,4 +795,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-02 16:41:01
+-- Dump completed on 2017-09-02 18:40:33
